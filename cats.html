@@ -1,0 +1,80 @@
+<html>
+     <head>
+         <title>Cats</title>
+         <link rel="stylesheet" href="css/style.css">
+     </head>
+<body>
+    <div style="text-align: center;">
+<h1>My Cats</h1>
+
+<a href="index.html">Home</a>
+<a href="about me.html">My Biodata</a>
+<a href="cats.html">Cats</a>
+<a href="family.html">Family</a>
+<a href="experiences.html">Experiences</a>
+<a href="gallery.html">Gallery</a>
+<a href="education.html">Education</a>
+
+    <div class="container">
+      <h1>MY CATS IN MY HOUSE <br>
+         (click on playbutton to PLAYVIDEO)</h1>
+<div class="col">
+  <div class="small-img-row">
+    <div class="small-img">
+      <img src="images/mama.png" width="150px">
+      <img src="images/playbutton.png" class="play-btn"
+      onclick="playVideo('video/mama.mp4')">
+
+</div>
+<p>She is the Mother for three of my cats.</p>
+  </div>
+  <div class="small-img-row">
+    <div class="small-img">
+      <img src="images/putet.png" width="150px">
+      <img src="images/playbutton.png" class="play-btn"
+      onclick="playVideo( 'video/putet.mp4')">
+</div>
+<p>She is my mom favourite.</p>
+</div>
+<div class="small-img-row">
+  <div class="small-img">
+    <img src="images/koi.png" width="150px">
+    <img src="images/playbutton.png" class="play-btn"
+    onclick="playVideo('video/koi.mp4')">
+</div>
+<p>He is my MOST favourite.</p>
+</div>
+<div class="small-img-row">
+  <div class="small-img">
+    <img src="images/abang.png" width="150px">
+    <img src="images/playbutton.png" class="play-btn"
+    onclick="playVideo('video/abang.mp4')">
+</div>
+<p>He is adopted cat, we rescue him.</p>
+</div>
+
+<div class="video-player" id="videoPlayer">
+  <video width="100%" controls autoplay id="mycats">
+    <source src="video/mama.mp4" type="video/mp4">
+  </video>
+  <img src="images/closebutton.png" class="close-btn" onclick="stopVideo()">
+</div>
+
+<script>
+  var videoPlayer = document.getElementById("videoPlayer");
+  var mycats = document.getElementById("mycats");
+
+  function stopVideo (){
+
+      videoPlayer. style.display = "none";
+  }
+
+  function playVideo(file){
+    mycats.src = file;
+    videoPlayer.style.display = "block";
+  }
+
+</script>
+
+</body>
+</html>
